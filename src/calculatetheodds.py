@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+final_steps = 60
+num_of_random_walks = 500
 np.random.seed(1993)
 
 all_walks = []
-for i in range(10):
+for i in range(num_of_random_walks):
     random_walk = [0]
-
     for x in range(100) :
         step = random_walk[-1]
         dice = np.random.randint(1,7)
@@ -28,3 +29,6 @@ numpy_allwalks_transpose = np.transpose(np.array(all_walks))
 end_points_of_all_the_random_walks = numpy_allwalks_transpose[-1,:]
 plt.hist(end_points_of_all_the_random_walks)
 plt.show()
+
+chance = np.count_nonzero(end_points_of_all_the_random_walks >= final_steps) / num_of_random_walks
+print(chance)
