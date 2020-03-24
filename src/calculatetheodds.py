@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 
 random_walk = [0]
@@ -14,3 +15,6 @@ for x in range(100) :
         step = step + np.random.randint(1,7)
 
     random_walk.append(step)
+
+plt.plot(random_walk)
+plt.show()
