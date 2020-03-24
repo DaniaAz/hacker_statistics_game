@@ -11,3 +11,6 @@ for more info about the random walk theory check wikipedia
  
 ## running the script
 Make sure to have python installed and the numpy, and matplotlib libraries as well 
+
+## tbd
+Add unit tests 
