@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-all_walks = []
+np.random.seed(1993)
 
+all_walks = []
 for i in range(10):
     random_walk = [0]
 
@@ -20,5 +21,11 @@ for i in range(10):
 
     all_walks.append(random_walk)
 
-plt.plot(random_walk)
+# Convert all_walks to Numpy array
+numpy_allwalks = np.array(all_walks)
+plt.plot(numpy_allwalks)
+plt.show()
+plt.clf()
+numpy_allwalks_transpose = np.transpose(numpy_allwalks)
+plt.plot(numpy_allwalks_transpose)
 plt.show()
