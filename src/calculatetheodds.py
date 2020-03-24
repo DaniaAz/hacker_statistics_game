@@ -24,11 +24,7 @@ for i in range(10):
 
     all_walks.append(random_walk)
 
-# Convert all_walks to Numpy array
-numpy_allwalks = np.array(all_walks)
-plt.plot(numpy_allwalks)
-plt.show()
-plt.clf()
-numpy_allwalks_transpose = np.transpose(numpy_allwalks)
-plt.plot(numpy_allwalks_transpose)
+numpy_allwalks_transpose = np.transpose(np.array(all_walks))
+end_points_of_all_the_random_walks = numpy_allwalks_transpose[-1,:]
+plt.hist(end_points_of_all_the_random_walks)
 plt.show()
