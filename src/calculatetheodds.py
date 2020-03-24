@@ -19,6 +19,9 @@ for i in range(10):
             step = step + np.random.randint(1,7)
         random_walk.append(step)
 
+        if np.random.rand() <= 0.001 :
+            step = 0
+
     all_walks.append(random_walk)
 
 # Convert all_walks to Numpy array
